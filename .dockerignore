@@ -1,0 +1,6 @@
+.git
+.env*
+tests
+screenshots
+README.md
+node_modules
