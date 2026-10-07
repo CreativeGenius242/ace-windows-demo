@@ -1,10 +1,10 @@
-# Ace Windows & Hardware — HGM concept v1
+# Ace Windows & Hardware — HGM concept v2
 
 Responsive one-page prospect website, prepared for `acewindows.hgm.services` on Tanya's VPS. Root `hgm.services` remains on Hostinger. No build dependencies; Nginx serves static assets through Coolify.
 
 ## Current capabilities
 
-- Product sections, original Ace logo, three AI-recreated reference visuals.
+- Product sections, original Ace logo, AI-recreated reference visuals and a hardware section.
 - No supplier prices, installation offer, site-measurement offer, warranties or certification claims.
 - Clearly labeled concept and image disclosures; noindex metadata and headers.
 - Product buttons preselect the inquiry category.
@@ -19,7 +19,7 @@ Open `http://localhost:8080`. The `/health` endpoint only exists in Nginx deploy
 
 ## Deploy through Coolify
 
-1. Create a private GitHub repository named `ace-windows-demo`, initialized with a README, and grant the connected GitHub application access to it. Upload this project's contents at the repository root, replacing the initial README.
+1. Use the existing public repository `CreativeGenius242/ace-windows-demo`, branch `main`. The GitHub application has access.
 2. Verify the IP of the actual destination resource server in Coolify's server configuration or the VPS provider panel. The supplied Coolify dashboard URL uses `86.48.21.39`; this alone does not prove the application server has the same IP.
 3. In Hostinger's DNS zone for hgm.services, add an A record named `acewindows` pointing to the verified server IPv4 address. Use default TTL. Check for conflicting A/AAAA/CNAME records for this specific subdomain. Leave root, www and mail records unchanged.
 4. In Coolify, select the provided project/environment, add a Git-backed application from the new repository, branch `main`, build pack `Dockerfile`, Dockerfile location `/Dockerfile`, base directory `/` and exposed/container port `80`.
@@ -29,7 +29,7 @@ Open `http://localhost:8080`. The `/health` endpoint only exists in Nginx deploy
 
 ## Before enabling real inquiries
 
-Obtain Ace's acceptance of contact routing and the site's claims/product visuals. Confirm actual products, brand spelling, opening hours and location. Generated images are illustrations, not exact inventory or product specification evidence. Door groove/handle details may differ from supplied products and require review.
+Obtain Ace's acceptance of contact routing and the site's claims/product visuals. Confirm actual products, brand spelling, opening hours and location. Generated images are illustrations, not exact inventory or product specification evidence. Generated door and hardware details may differ from supplied products and require review. The 36 × 80 label from the social post is not treated as a verified current specification.
 
 Then enable WhatsApp click-to-chat to `12424346814` with URL-encoded message text and an explicit label: “Open WhatsApp — you still press Send.” Do not claim a click proves a sent message. Add a backend for lead storage, notifications and approved follow-up separately.
 
@@ -55,4 +55,10 @@ This concept has no analytics integration. Real conversion measurement must be i
 
 ## Status
 
-Prepared locally; not yet pushed to GitHub or deployed to the VPS. Repository creation is a user step because the connected GitHub connector does not expose repository creation.
+Version 1 was deployed and verified over HTTPS on 2026-10-06 Nassau time. Version 2 adds social-reference hardware categories and an exterior-door recreation; deployment verification is tracked separately. VPS IP confirmed: `86.48.21.39`. Demo-only inquiry routing remains unchanged.
+
+## Version 2 assets
+
+- `public/assets/exterior-door.webp`: built-in imagegen; social exterior-door reference; white door, three stacked rectangular glass panels, two right-side hardware holes, clean studio backdrop, no text or price.
+- `public/assets/hardware.webp`: built-in imagegen; supplied social references for silver thumb-latch pull, matte black lever, silver knob and blue caulking gun; clean catalog still life, no logos, prices or packaging.
+- Thinset and cutting blades are listed as inquiry categories without generated packaging or unverified specifications.
